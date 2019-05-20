@@ -12,14 +12,18 @@
       width: 95px;
       height: 95px;
       border: 3px solid rgb(85, 114, 100);
-      background: linear-gradient(to bottom, #f87f73 50%, #292423 50%);
+      background: linear-gradient(to bottom, #578060 55%, #45674c 35%);
+      & figure {
+        background-image: url("https://i.imgur.com/MzzH8Wn.png");
+        height: 55px;
+        width: 55px;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
     }
-    & figure {
-      background-image: url("https://i.kym-cdn.com/entries/icons/medium/000/018/992/blackmageknife.png");
-      height: 55px;
-      width: 55px;
-      background-size: contain;
-      background-repeat: no-repeat;
+    & .rc-progress-line {
+    //   height: 20px;
+    //   width: 50px;
     }
   }
 }
