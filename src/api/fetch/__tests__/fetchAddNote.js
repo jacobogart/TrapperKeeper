@@ -11,14 +11,14 @@ describe("fetchAddNote", () => {
 
   it("should call fetch with the correct params", () => {
     const url = `${host}/notes`;
-    const body = { id: new Date(), tasks: [mockTask, mockTask] };
+    const body = { id: new Date(), title: 'My First Quest', tasks: [mockTask, mockTask] };
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body)
     };
 
-    fetchAddNote([mockTask, mockTask]);
+    fetchAddNote('My First Quest', [mockTask, mockTask]);
     expect(fetch).toHaveBeenCalledWith(url, options);
   });
 
