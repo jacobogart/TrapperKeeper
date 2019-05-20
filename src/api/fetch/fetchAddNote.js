@@ -3,12 +3,12 @@ import { host } from '../utilities';
 export const fetchAddNote = (tasks) => {
   const url = `${host}/notes`;
   const body = { id: new Date(), tasks }
-  const init = {
+  const options = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body)
   }
-  return fetch(url, init)
+  return fetch(url, options)
     .then(response => {
       if (!response.ok) {
         throw Error('Failed to add note')
