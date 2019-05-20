@@ -1,5 +1,6 @@
 export const questsReducer = (state = [], action) => {
-    switch(action.type) {
-        
-    }
-}
+  switch (action.type) {
+    default:
+      return state;
+  }
+};
