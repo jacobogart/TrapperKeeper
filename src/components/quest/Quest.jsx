@@ -28,7 +28,10 @@ export class Quest extends Component {
       <article>
         <h2>{title}</h2>
         <ul>{uncompletedTaskItems}</ul>
-        <p onClick={this.toggleShowCompleted}>
+        <p 
+          className='showCompleted'
+          onClick={this.toggleShowCompleted}
+        >
           Show {completedTaskItems.length} completed challenges
         </p>
         <ul>{this.state.showCompleted && completedTaskItems}</ul>
