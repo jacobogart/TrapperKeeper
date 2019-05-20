@@ -1,6 +1,6 @@
 import { host } from '../utilities';
 
-export const fetchAllnotes = () => {
+export const fetchAllNotes = () => {
   return fetch(`${host}/notes`)
     .then(response => {
       if (!response.ok) {
