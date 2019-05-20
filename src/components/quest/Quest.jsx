@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { mockNote } from '../../api/utilities';
 export class Quest extends Component {
   constructor(props) {
     super(props);
@@ -14,22 +13,23 @@ export class Quest extends Component {
   
 
   render() {
-    const { title, tasks } = mockNote;
-    const uncompletedTasks  = tasks.filter(task => !task.isCompleted);
-    const uncompletedTaskItems = uncompletedTasks.map(task =>
-      <li key={task.id}>{task.message}</li>);
-    const completedTasks = tasks.filter(task => task.isCompleted);
-    const completedTaskItems = completedTasks.map(task => (
-        <li key={task.id}>{task.message}</li>
-      ));
+    const { title, tasks } = this.props.data;
+    const completedTaskItems = [];
+    const uncompletedTaskItems = [];
 
+    tasks.forEach(task => {
+      const taskItem = <li key={task.id}>{task.message}</li>;
+      task.isCompleted
+        ? completedTaskItems.push(taskItem)
+        : uncompletedTaskItems.push(taskItem);
+    });
     
     return (
       <article>
         <h2>{title}</h2>
         <ul>{uncompletedTaskItems}</ul>
         <p onClick={this.toggleShowCompleted}>
-          Show {completedTasks.length} completed challenges
+          Show {completedTaskItems.length} completed challenges
         </p>
         <ul>{this.state.showCompleted && completedTaskItems}</ul>
       </article>
