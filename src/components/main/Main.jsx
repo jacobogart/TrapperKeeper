@@ -4,9 +4,9 @@ import QuestContainer from '../questContainer/QuestContainer';
 export class Main extends Component {
   render() {
     return (
-      <div>
+      <main>
         <QuestContainer />
-      </div>
+      </main>
     )
   }
 }
