@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import Banner from "../banner/Banner";
-import Nav from "../nav/Nav";
+import React, { Component } from 'react';
+import Banner from '../Banner/Banner';
+import Nav from '../Nav/Nav';
 
 export class Header extends Component {
-  render() {
-    return (
-      <React.Fragment>
-        <Nav />
-        <Banner />
-      </React.Fragment>
-    );
-  }
+	render() {
+		return (
+      <header className="Header">
+				<Nav />
+				<Banner />
+			</header>
+		);
+	}
 }
