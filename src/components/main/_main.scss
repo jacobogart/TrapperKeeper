@@ -9,11 +9,55 @@
   padding: 15px 25px;
 }
 
+.controls {
+  display: flex;
+}
+
 .page-title {
   color: white;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 22px;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 20px;
+  position: relative;
+}
+
+.search-input,
+.quest-filter {
+  height: 28px;
+  margin-left: 30px;
+}
+
+.search-bar {
+  position: relative;
+}
+
+.search-input {
+  width: 325px;
+  border-radius: 8px;
+  border: none;
+  padding-left: 10px;
+}
+
+.fa-search {
+  position: absolute;
+  right: 8px;
+  top: 5px;
+  color: rgb(155, 155, 155);
+}
+
+.quest-filter {
+  width: 80px;
+}
+
+::placeholder {
+  font-size: 14px;
+  font-style: italic;
 }
 
 .add-quest-btn {
