@@ -5,9 +5,11 @@ import Main from '../../components/Main/Main';
 export class App extends Component {
 	render() {
 		return (
-			<div className="app">
-				<Header />
-				<Main />
+      <div className="App">
+        <div className="background">
+          <Header />
+          <Main />
+        </div>
 			</div>
 		);
 	}

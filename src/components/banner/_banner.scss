@@ -1,6 +1,7 @@
 .Banner {
   background-color: $secondaryHeaderColor;
   height: 110px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.29);
   @include flex(null, null, center, null);
   & div {
     @include flex(null, center, center, null);
