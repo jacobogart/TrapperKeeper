@@ -15,7 +15,7 @@ class QuestForm extends Component {
 	};
 
 	handleSubmit = e => {
-		fetch('http://localhost:3000/api/quests', {
+		fetch('http://localhost:5000/api/quests', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
