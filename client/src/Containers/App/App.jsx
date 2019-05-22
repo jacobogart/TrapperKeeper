@@ -10,6 +10,13 @@ export class App extends Component {
     }
   }
 
+  componentDidMount() {
+    fetch('/quests')
+      .then(res => res.json())
+      .then(quests => console.log(quests))
+  }
+  
+
 	render() {
 		return (
       <div className="App">

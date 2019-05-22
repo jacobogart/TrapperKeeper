@@ -22,7 +22,6 @@ server.locals.quests = [mockQuest]
 server.use(express.json());
 
 server.get('/quests', (request, response) => {
-  console.log(server.locals.quests);
   response.status(200).json(server.locals.quests);
 });
 
