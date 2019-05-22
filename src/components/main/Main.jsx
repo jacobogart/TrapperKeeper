@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
 import QuestContainer from '../QuestContainer/QuestContainer';
+import QuestForm from '../../components/QuestForm/QuestForm';
 
 export class Main extends Component {
+  state = {
+    showForm: false
+  }
+
   render() {
+    const form = this.state.showForm ? <QuestForm closeForm={() => this.setState({ showForm: false })} /> : null;
+
     return (
       <main className="Main">
+        {form}
         <div className="main-header">
           <h1 className="page-title">My Quests</h1>
           <div className="controls">
@@ -16,7 +24,7 @@ export class Main extends Component {
           </div>
         </div>
         <QuestContainer />
-        <button className="add-quest-btn" type="button"><i className="fas fa-plus"></i></button>
+        <button className="add-quest-btn" type="button"><i className="fas fa-plus" onClick={() => this.setState({showForm: true})}></i></button>
       </main>
     )
   }

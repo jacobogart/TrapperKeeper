@@ -13,14 +13,13 @@ export class Quest extends Component {
 	};
 
 	render() {
-		const { title, tasks } = this.props.data;
+    const { title, challenges } = this.props.data;
 		const completedTaskItems = [];
 		const uncompletedTaskItems = [];
 
-		tasks.forEach(task => {
-      const taskItem = <li className="challenge-txt" key={task.id} contentEditable="true">{task.message}</li>;
-			task.isCompleted ? completedTaskItems.push(taskItem) : uncompletedTaskItems.push(taskItem);
-		});
+    // const challengeList = challenges.map((chal, i) => {
+    //   return <li className="challenge-txt" key={i} contentEditable="true">{chal}</li>
+    // })
 
 		return (
       <article className="Quest">
@@ -28,11 +27,12 @@ export class Quest extends Component {
           <h2 className="card-title" contentEditable="true">{title}</h2>
         </div>
         <div className="card-body">
-          <ul>{uncompletedTaskItems}</ul>
+          <ul>{challenges}</ul>
+          {/* <ul>{uncompletedTaskItems}</ul>
           <p className="showCompleted" onClick={this.toggleShowCompleted}>
             Show {completedTaskItems.length} completed challenges
           </p>
-          <ul>{this.state.showCompleted && completedTaskItems}</ul>
+          <ul>{this.state.showCompleted && completedTaskItems}</ul> */}
           <button className="delete-btn" type="button">
             <i className="fas fa-trash"></i>
           </button>
