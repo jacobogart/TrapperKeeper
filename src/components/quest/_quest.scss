@@ -1,11 +1,16 @@
 .Quest {
   background: #E1EBDE;
   margin: 0 30px 30px 0;
+  border: 1px solid #8CAC81;
   border-radius: 8px;
-  box-shadow: 3px 3px 3px #000;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.639);
   height: 315px;
-  width: 250px;
+  width: 245px;
   position: relative;
+
+  &:hover {
+    box-shadow: 0 0 8px rgba(199, 255, 86, 0.509);
+  }
 }
 
 .card-header {
