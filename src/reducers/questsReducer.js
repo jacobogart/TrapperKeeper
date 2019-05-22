@@ -3,7 +3,7 @@ export const questsReducer = (state = [], action) => {
     case 'STORE_QUESTS':
       return action.payload.quests
     case 'ADD_QUEST':
-      const quests = state.push(action.payload.quest)
+      const quests = [...state, action.payload.quest];
       return quests;
     default:
       return state;
