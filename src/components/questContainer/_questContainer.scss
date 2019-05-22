@@ -2,5 +2,5 @@
   display: flex;
   flex-wrap: wrap;
   overflow: scroll;
-  height: 70vh;
+  height: calc(100vh - 215px);
 }

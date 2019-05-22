@@ -6,9 +6,13 @@ export class Main extends Component {
   state = {
     showForm: false
   }
+  
+  closeForm = () => {
+    this.setState({ showForm: false })
+  }
 
   render() {
-    const form = this.state.showForm ? <QuestForm closeForm={() => this.setState({ showForm: false })} /> : null;
+    const form = this.state.showForm ? <QuestForm closeForm={this.closeForm} /> : null;
 
     return (
       <main className="Main">

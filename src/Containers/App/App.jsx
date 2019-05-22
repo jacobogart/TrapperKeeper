@@ -6,6 +6,7 @@ import { storeQuests } from '../../actions';
 
 export class App extends Component {
   componentDidMount() {
+    !this.props.quests.length && 
     fetch('http://localhost:3000/api/quests')
       .then(response => response.json())
       .then(data => this.props.storeQuests(data.quests))
