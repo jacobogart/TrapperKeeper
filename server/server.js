@@ -1,5 +1,6 @@
 const express = require('express');
 const server = express();
+const cors = require("cors");
 
 const mockQuest = {
   id: 1,
@@ -19,13 +20,14 @@ server.set("port", process.env.PORT || 5000);
 server.locals.title = "HelmsKeep";
 server.locals.quests = [mockQuest]
 
+server.use(cors());
 server.use(express.json());
 
-server.get('/quests', (request, response) => {
+server.get('/api/quests', (request, response) => {
   response.status(200).json(server.locals.quests);
 });
 
-server.post('/quests', (request, response) => {
+server.post('/api/quests', (request, response) => {
   const newQuest = { id: Date.now(), ...request.body }
   const newQuestKeys = Object.keys(newQuest);
 

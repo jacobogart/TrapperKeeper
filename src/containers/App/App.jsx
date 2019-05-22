@@ -9,7 +9,7 @@ export class App extends Component {
     !this.props.quests.length && 
     fetch('http://localhost:5000/api/quests')
       .then(response => response.json())
-      .then(data => this.props.storeQuests(data.quests))
+      .then(quests => this.props.storeQuests(quests))
   }
 
   render() {    
